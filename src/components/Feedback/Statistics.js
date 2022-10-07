@@ -1,0 +1,23 @@
+import React from 'react';
+import { TitleSecond, Item, ListResult } from './Feedback.Styled';
+
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercent,
+}) {
+  return (
+    <div>
+      <TitleSecond>Statistics</TitleSecond>
+      <ListResult>
+        <Item>Good:{good}</Item>
+        <Item>Neutral:{neutral}</Item>
+        <Item>Bad:{bad}</Item>
+        <Item>Total:{total}</Item>
+        <Item>Positive feedback:{positivePercent}%</Item>
+      </ListResult>
+    </div>
+  );
+}
