@@ -3,13 +3,12 @@ import styled from 'styled-components';
 export const Button = styled.button`
   background: ${props => (props.primary ? 'green' : 'white')};
   color: ${props => (props.primary ? 'white' : 'green')};
-
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
+  font-size: 18px;
+  line-height: 1.14;
   border: 2px solid palevioletred;
   border-radius: 3px;
   cursor: pointer;
+  margin-right: 12px;
 `;
 export const Wrapper = styled.div`
   display: flex;

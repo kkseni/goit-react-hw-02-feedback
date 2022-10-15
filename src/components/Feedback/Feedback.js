@@ -37,16 +37,21 @@ export default class Feedback extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
-    const positivePercent = this.countPositiveFeedbackPercentage();
+    const options = ['good', 'neutral', 'bad'];
+    const positivePercent = this.countPositiveFeedbackPercentage('good');
     return (
       <Container>
         <Title>Please leave feedback</Title>
-        <FeedbackOptions onleaveFeedback={this.onleaveFeedback} />
+        <FeedbackOptions
+          onleaveFeedback={this.onleaveFeedback}
+          options={options}
+        />
         <div>
           {!total ? (
             <Notific>There is no feedback</Notific>
           ) : (
             <Statistics>
+              key={options}
               good={good}
               neutral={neutral}
               bad={bad}
@@ -60,6 +65,7 @@ export default class Feedback extends Component {
   }
 }
 Feedback.propTypes = {
+  option: PropTypes.number,
   good: PropTypes.number,
   neutral: PropTypes.number,
   bad: PropTypes.number,

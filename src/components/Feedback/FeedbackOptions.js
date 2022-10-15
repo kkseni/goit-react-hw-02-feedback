@@ -1,22 +1,22 @@
 import React from 'react';
 import { Button, Wrapper, List, Item } from './Feedback.Styled';
 
-export default function FeedbackOptions({ onleaveFeedback }) {
+export default function FeedbackOptions({ options, onleaveFeedback }) {
   return (
     <>
-      <Wrapper>
-        <List>
-          <Item>
-            <Button onClick={() => onleaveFeedback('good')}>Good</Button>
-          </Item>
-          <Item>
-            <Button onClick={() => onleaveFeedback('neutral')}>Neutral</Button>
-          </Item>
-          <Item>
-            <Button onClick={() => onleaveFeedback('bad')}>Bad</Button>
-          </Item>
-        </List>
-      </Wrapper>
+      <List>
+        {options.map(option => {
+          return (
+            <Button
+              type="button"
+              key={option}
+              onClick={() => onleaveFeedback(option)}
+            >
+              {option}
+            </Button>
+          );
+        })}
+      </List>
     </>
   );
 }
