@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Wrapper, List, Item } from './Feedback.Styled';
+import { Button, List } from './Feedback.Styled';
 
 export default function FeedbackOptions({ options, onleaveFeedback }) {
   return (

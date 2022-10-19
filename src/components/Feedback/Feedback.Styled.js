@@ -10,9 +10,7 @@ export const Button = styled.button`
   cursor: pointer;
   margin-right: 12px;
 `;
-export const Wrapper = styled.div`
-  display: flex;
-`;
+
 export const Title = styled.h1`
   color: #212121;
   font-family: 'Moncerrat', sans-serif;
@@ -36,10 +34,6 @@ export const ListResult = styled.ul`
   color: #2f4f4f;
 `;
 
-export const Item = styled.li`
-  font-size: 18px;
-  line-height: 1.14;
-`;
 export const Notific = styled.h3`
   color: #dc143c;
   font-size: 18px;
