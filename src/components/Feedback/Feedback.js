@@ -39,6 +39,7 @@ export default class Feedback extends Component {
     const total = this.countTotalFeedback();
     const options = ['good', 'neutral', 'bad'];
     const positivePercent = this.countPositiveFeedbackPercentage('good');
+    console.log(`neutral`, neutral);
     return (
       <Container>
         <Title>Please leave feedback</Title>
@@ -50,13 +51,14 @@ export default class Feedback extends Component {
           {!total ? (
             <Notific>There is no feedback</Notific>
           ) : (
-            <Statistics>
-              key={options}
+            <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
               total={total}
               positiveRercent={positivePercent}
+            >
+              key={options}
             </Statistics>
           )}
         </div>

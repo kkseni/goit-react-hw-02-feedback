@@ -8,6 +8,7 @@ export default function Statistics({
   total,
   positivePercent,
 }) {
+  console.log(`neutral`, neutral);
   return (
     <div>
       <TitleSecond>Statistics</TitleSecond>
