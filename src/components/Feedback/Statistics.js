@@ -1,5 +1,5 @@
 import React from 'react';
-import { TitleSecond, Item, ListResult } from './Feedback.Styled';
+import { TitleSecond, ListResult } from './Feedback.Styled';
 
 export default function Statistics({
   good,
