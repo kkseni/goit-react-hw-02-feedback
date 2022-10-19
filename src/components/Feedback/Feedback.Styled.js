@@ -33,6 +33,10 @@ export const ListResult = styled.ul`
   list-style: none;
   color: #2f4f4f;
 `;
+export const Item = styled.li`
+  font-size: 18px;
+  line-height: 1.14;
+`;
 
 export const Notific = styled.h3`
   color: #dc143c;

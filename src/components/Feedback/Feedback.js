@@ -22,8 +22,8 @@ export default class Feedback extends Component {
       return 0;
     }
     const value = this.state[propertyName];
-    const result = (value / total) * 100;
-    return Number(result.toFixed(2));
+    const result = value / 100;
+    return result;
   }
   onleaveFeedback = propertyName => {
     this.setState(prevState => {
@@ -38,8 +38,8 @@ export default class Feedback extends Component {
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
     const options = ['good', 'neutral', 'bad'];
-    const positivePercent = this.countPositiveFeedbackPercentage('good');
-    console.log(`neutral`, neutral);
+    const positivePercent = this.countPositiveFeedbackPercentage('result');
+
     return (
       <Container>
         <Title>Please leave feedback</Title>
